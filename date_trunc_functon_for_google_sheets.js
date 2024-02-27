@@ -1,3 +1,18 @@
+/**
+* Truncates a date to the beginning of a specified time unit (YEAR, MONTH, WEEK, or DAY).
+*
+* @param {string} time_unit The time unit to which the date should be truncated ('YEAR', 'MONTH', 'WEEK', 'DAY').
+* @param {date} input The date to be truncated.
+* @return {date} The truncated date.
+* @customfunction
+* @example
+* Example Month:
+* date_trunc("month", "2023-02-15") // Returns February 1, 2023, as a date object.
+* @example
+* Example Week:
+* =date_trunc("week", "2023-08-25") // Returns the date of the Monday of the week of August 25, 2023..
+*/
+
 function date_trunc(time_unit, input) {
   var rawDate = new Date(input)
   var timeZone = Session.getScriptTimeZone()
